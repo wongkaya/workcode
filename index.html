@@ -5,9 +5,9 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <meta name="theme-color" content="#0F1B2D">
 <title>Workcode by LifeCode | Verifikasi Karakter ART, Sopir &amp; Babysitter</title>
-<meta name="description" content="Verifikasi karakter pekerja rumah: ART, Sopir, Babysitter. Laporan karakter dari pembacaan emosi + SOP + garansi 24 jam.">
+<meta name="description" content="Verifikasi karakter pekerja rumah: ART, Sopir, Babysitter. Laporan karakter (Google Docs / PDF) dari pembacaan emosi + SOP + garansi proses.">
 <meta property="og:title" content="Workcode by LifeCode, verifikasi karakter pekerja rumah">
-<meta property="og:description" content="Kenali karakter ART, sopir, dan babysitter sebelum mereka masuk rumah Anda. Laporan karakter + SOP + garansi 24 jam.">
+<meta property="og:description" content="Kenali karakter ART, sopir, dan babysitter sebelum mereka masuk rumah Anda. Laporan karakter + SOP + garansi proses.">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@1,500;1,600&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 <style>
@@ -96,8 +96,11 @@ details.grp summary i{font-style:normal;font-weight:600;font-size:11px;color:var
 .dc{display:flex;gap:13px;background:var(--card);border:1px solid var(--line);border-radius:18px;padding:14px 16px}
 .dc>b{flex:none;width:36px;height:36px;border-radius:11px;background:var(--navy);color:#F6C99B;display:grid;place-items:center;font-size:17px}
 .dc strong{display:block;font-size:14px}.dc p{font-size:12.5px;color:var(--ink2)}
+.dc p b{color:var(--ink)}
 .guar{display:flex;gap:12px;background:var(--sage2);border-radius:16px;padding:14px;margin-top:12px}
 .guar p{font-size:12.5px;color:var(--ink2)}
+.guar p b{color:var(--ink)}
+.gsub{font-size:11px;font-weight:800;letter-spacing:1.2px;text-transform:uppercase;color:var(--sage);margin:20px 0 8px}
 
 /* steps */
 .st{display:flex;gap:14px;align-items:center;background:var(--card);border:1px solid var(--line);border-radius:18px;padding:13px 16px;margin-bottom:9px}
@@ -137,6 +140,7 @@ details.grp summary i{font-style:normal;font-weight:600;font-size:11px;color:var
 .faq summary::-webkit-details-marker{display:none}.faq summary::after{content:'+';font-size:20px;color:var(--cu);line-height:1}
 .faq details[open] summary::after{content:'\2212'}
 .faq p{padding:0 0 14px;color:var(--ink2);font-size:13px}
+.faq p b{color:var(--ink)}
 
 /* form */
 .try{margin:36px 12px 12px;border-radius:26px;padding:28px 16px;color:#F4EFE6;background:radial-gradient(70% 45% at 100% 0,rgba(201,112,43,.4),transparent 70%),linear-gradient(160deg,#0A1322,#0F1B2D 60%,#1B3050)}
@@ -154,6 +158,7 @@ details.grp summary i{font-style:normal;font-weight:600;font-size:11px;color:var
 .roles label span{display:block;font-size:20px}
 .roles input:checked+label{border-color:var(--cu);background:var(--cu2)}
 .roles input:focus-visible+label{outline:2px solid var(--cu)}
+.hint{font-size:11.5px;color:var(--ink3);margin:-6px 0 12px}
 .ag{display:flex;gap:10px;align-items:flex-start;font-size:12.5px;color:var(--ink2);margin:2px 0 12px;cursor:pointer}.ag input{width:20px;height:20px;margin-top:2px;flex-shrink:0;accent-color:var(--cu)}
 .err{display:none;background:var(--warn2);color:var(--warn);border-radius:12px;padding:10px 13px;font-size:13px;font-weight:600;margin-bottom:12px}.err.on{display:block}
 .fnote{font-size:11.5px;color:var(--ink3);margin-top:10px;text-align:center}
@@ -179,7 +184,7 @@ footer{padding:22px 18px 26px;font-size:11.5px;color:var(--ink3)}
  <h1>Mana yang lebih penting? Pengalaman kerja atau <em>karakter respons emosional?</em></h1>
  <p class="lead" style="font-weight:700;color:#F6C99B;font-size:15px;margin-bottom:8px">Pintar kerja, tetapi karakternya dominan marah?</p>
  <p class="lead">Banyak orang mewawancarai berdasarkan pengalaman kerja, keahlian, dan lama bekerja. Tetapi tidak melihat karakter emosinya: bagaimana ia merespons tekanan pekerjaan dan menghadapi konflik dengan sesama pekerja di dalam rumah.</p>
- <div class="pills"><span>📄 Laporan karakter</span><span>📋 SOP siap pakai</span><span>🛡️ Garansi 24 jam</span></div>
+ <div class="pills"><span>📄 Laporan PDF / Docs</span><span>📋 SOP siap pakai</span><span>🛡️ Garansi proses</span></div>
  <a class="btn ghost" href="#contoh">Lihat Contoh Laporan</a>
 </section>
 
@@ -228,16 +233,23 @@ footer{padding:22px 18px 26px;font-size:11.5px;color:var(--ink3)}
  <p class="caveat">Contoh di atas adalah kecenderungan yang perlu dikelola, bukan ramalan. Perilaku nyata juga dipengaruhi lingkungan dan cara Anda memimpin.</p>
 </section>
 
-<!-- DELIVERABLES -->
-<section class="sec">
+<!-- DELIVERABLES + GARANSI -->
+<section class="sec" id="garansi">
  <p class="kick">Yang Anda terima</p>
  <h2>Laporan, SOP, <em>garansi</em></h2>
  <div class="dl" style="margin-top:14px">
-  <div class="dc"><b>1</b><div><strong>Laporan Karakter</strong><p>Emosi dominan, kondisi, cara merespons, dan sikap. Disertai kekuatan, area waspada, dan dampaknya pada peran yang dipilih.</p></div></div>
+  <div class="dc"><b>1</b><div><strong>Laporan Karakter</strong><p>Emosi dominan, kondisi, cara merespons, dan sikap. Disertai kekuatan, area waspada, dan dampaknya pada peran yang dipilih. Dikirim dalam bentuk Google Docs atau PDF.</p></div></div>
   <div class="dc"><b>2</b><div><strong>SOP &amp; Panduan Komunikasi</strong><p>SOP 1 halaman sesuai peran, panduan minggu pertama, serta contoh kalimat teguran dan apresiasi yang cocok untuk karakternya.</p></div></div>
-  <div class="dc"><b>3</b><div><strong>Garansi 24 Jam</strong><p>Jika calon tidak merespons dalam 24 jam sejak kami hubungi, kami jadwalkan ulang atau refund sepenuhnya.</p></div></div>
+  <div class="dc"><b>3</b><div><strong>2 Garansi Workcode</strong><p>Garansi proses dan 1x sesi penjelasan laporan. Rinciannya di bawah.</p></div></div>
  </div>
- <div class="guar"><div style="font-size:22px">🛡️</div><p><b>Garansi yang jujur.</b> Garansi berlaku untuk proses (calon tidak merespons). Kami tidak menjamin hasil kinerja pekerja setelah direkrut.</p></div>
+
+ <p class="gsub">Garansi Workcode</p>
+ <div class="dl">
+  <div class="dc"><b>🛡️</b><div><strong>Garansi Proses</strong><p>Jika calon tidak merespons dalam 24 jam sejak kami hubungi (kami mencoba maksimal 3 kali), atau calon menolak ikut sesi, kami jadwalkan ulang atau <b>refund 100%</b>.</p></div></div>
+  <div class="dc"><b>💬</b><div><strong>Sesi Penjelasan 15 Menit</strong><p>Setelah laporan terkirim, Anda berhak 1x tanya jawab lewat WhatsApp (maks. 15 menit, dalam 3 hari) untuk memahami isi laporan dan cara memakai SOP-nya.</p></div></div>
+ </div>
+
+ <div class="guar"><div style="font-size:22px">🛡️</div><p><b>Garansi yang jujur.</b> Garansi berlaku untuk <b>proses</b> (calon tidak merespons atau menolak sesi). Kami tidak menjamin hasil kinerja pekerja setelah direkrut, dan laporan yang sudah dikirim tidak dapat di-refund berdasarkan isi atau kecocokan penilaian.</p></div>
 </section>
 
 <!-- CARA KERJA -->
@@ -248,14 +260,14 @@ footer{padding:22px 18px 26px;font-size:11.5px;color:var(--ink3)}
  <div class="st"><b>01</b><div><strong>Isi form singkat</strong><p>Pilih peran, isi nama Anda, nama dan WhatsApp calon pekerja.</p></div></div>
  <div class="st"><b>02</b><div><strong>Konsultasi via WhatsApp</strong><p>Kami tanyakan kebutuhan dan hal yang paling Anda khawatirkan.</p></div></div>
  <div class="st"><b>03</b><div><strong>Kami hubungi calon pekerja</strong><p>Dengan sopan, menjelaskan siapa yang meminta, lalu sesi emosi yang sukarela.</p></div></div>
- <div class="st"><b>04</b><div><strong>Laporan ke WhatsApp Anda</strong><p>Laporan karakter + SOP dikirim langsung, dibaca dan ditinjau manual.</p></div></div>
+ <div class="st"><b>04</b><div><strong>Laporan ke WhatsApp Anda</strong><p>Laporan karakter + SOP dikirim langsung dalam bentuk Google Docs atau PDF, dibaca dan ditinjau manual.</p></div></div>
  <p class="note">Waktu selesai bergantung respons calon pekerja, jadi kami tidak menjanjikan durasi pasti.</p>
 </section>
 
 <!-- CONTOH LAPORAN -->
 <section class="sec" id="contoh">
  <p class="kick">Contoh laporan</p>
- <h2>Contoh<em>laporan</em> yang Anda terima</h2>
+ <h2>Contoh <em>laporan</em> yang Anda terima</h2>
  <p class="sub">Contoh laporan lengkap untuk satu calon ART. Ketuk tiap bagian untuk membuka.</p>
  <div class="sam">
   <span class="tg">Hasil Tes Karakter (Contoh Laporan)</span>
@@ -276,6 +288,7 @@ footer{padding:22px 18px 26px;font-size:11.5px;color:var(--ink3)}
    <li>Ini alat bantu keputusan, bukan diagnosis psikologis atau medis, dan bukan jaminan kinerja.</li>
    <li>Jangan jadikan satu-satunya dasar untuk menerima atau menolak. Padukan dengan wawancara, cek referensi, dan masa percobaan.</li>
    <li>Calon pekerja harus tahu dan setuju. Ia boleh menolak, dan data tidak diproses tanpa persetujuannya.</li>
+   <li>Garansi berlaku untuk proses (calon tidak merespons), bukan untuk kecocokan hasil dengan harapan Anda atau kinerja pekerja setelah direkrut.</li>
   </ul>
  </div>
 </section>
@@ -289,7 +302,8 @@ footer{padding:22px 18px 26px;font-size:11.5px;color:var(--ink3)}
   <details><summary>Siapa yang menghubungi calon pekerja?</summary><p>Tim kami, secara manual lewat WhatsApp. Kami menjelaskan siapa kami, siapa yang meminta, dan bahwa sesi ini sukarela.</p></details>
   <details><summary>Bagaimana jika calon pekerja kesulitan membaca?</summary><p>Pernyataan bisa dibacakan tim kami lewat telepon atau voice note.</p></details>
   <details><summary>Apakah calon pekerja harus setuju?</summary><p>Ya. Tanpa persetujuannya, sesi tidak dijalankan.</p></details>
-  <details><summary>Apa yang dimaksud garansi 24 jam?</summary><p>Bila calon tidak merespons dalam 24 jam sejak kami hubungi, kami jadwalkan ulang atau refund penuh.</p></details>
+  <details><summary>Apa saja garansi Workcode?</summary><p>Ada dua. <b>Garansi Proses:</b> jika calon tidak merespons dalam 24 jam sejak kami hubungi (maks. 3 kali percobaan) atau menolak ikut sesi, kami jadwalkan ulang atau refund penuh. <b>Sesi Penjelasan:</b> 1x tanya jawab WhatsApp maksimal 15 menit untuk memahami isi laporan.</p></details>
+  <details><summary>Kapan garansi tidak berlaku?</summary><p>Garansi tidak mencakup kinerja, kejujuran, atau perilaku pekerja setelah direkrut, dan tidak berlaku jika Anda tidak setuju dengan isi penilaian pada laporan yang sudah terkirim. Garansi proses juga tidak berlaku bila nomor WhatsApp calon yang Anda berikan salah, atau Anda belum memberi tahu calon bahwa ia akan dihubungi.</p></details>
   <details><summary>Bagaimana data calon pekerja diperlakukan?</summary><p>Data hanya dipakai untuk menyusun laporan dan tindak lanjut layanan, dan tidak dibagikan ke pihak lain.</p></details>
  </div>
 </section>
@@ -299,7 +313,7 @@ footer{padding:22px 18px 26px;font-size:11.5px;color:var(--ink3)}
  <p class="kick">Langkah selanjutnya</p>
  <h2>Ajukan <em>Verifikasi Karakter</em></h2>
  <p class="sub">Setiap sesi dihubungi dan ditinjau manual, jadi kapasitas harian terbatas.</p>
- <div class="price"><small>Harga perkenalan per calon pekerja</small><b>Rp 149.000</b><small>Laporan karakter + SOP, dikirim ke WhatsApp Anda</small></div>
+ <div class="price"><small>Harga perkenalan per calon pekerja</small><b>Rp 149.000</b><small>Laporan karakter + SOP (Google Docs / PDF), dikirim ke WhatsApp Anda</small></div>
 
  <form class="form" id="f" novalidate>
   <label class="l">Peran yang dicari</label>
@@ -314,6 +328,7 @@ footer{padding:22px 18px 26px;font-size:11.5px;color:var(--ink3)}
   <input class="field" id="cn" name="cn" maxlength="40" placeholder="Contoh: Sari">
   <label class="l" for="cw">WhatsApp calon pekerja</label>
   <input class="field" id="cw" name="cw" type="tel" inputmode="tel" placeholder="Contoh: 0857XXXXXXXX">
+  <p class="hint">Periksa kembali nomornya, dan mohon beri tahu calon bahwa tim Workcode akan menghubungi lewat WhatsApp.</p>
   <label class="l" for="d">Kapan Anda perlu memutuskan?</label>
   <select class="field" id="d" name="d"><option>Hari ini atau besok</option><option>Minggu ini</option><option>Belum menentukan</option></select>
   <label class="l" for="c">Catatan (boleh dikosongkan)</label>
@@ -332,7 +347,7 @@ footer{padding:22px 18px 26px;font-size:11.5px;color:var(--ink3)}
 </main>
 
 <div class="bar">
- <div><b>Rp 149.000</b><small>Workcode · Garansi 24 jam</small></div>
+ <div><b>Rp 149.000</b><small>Workcode · Garansi proses</small></div>
  <a href="#ajukan">Cek Karakter</a>
 </div>
 
